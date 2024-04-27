@@ -1,5 +1,9 @@
 # Rick and Morty
 
+#Nome: Gabriel Bueno da Silva
+#RA: 1960373
+#Termo: 3°A
+
 # Listando personagens
 
 Usando a api do Rick and Morty: https://rickandmortyapi.com/api/character
