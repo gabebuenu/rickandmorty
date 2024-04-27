@@ -8,12 +8,12 @@
 
 Usando a api do Rick and Morty: https://rickandmortyapi.com/api/character
 
--- Nome
--- Status
--- Espécie
--- Gênero
--- Localização atual
--- Episódio que apareceu
+- Nome
+- Status
+- Espécie
+- Gênero
+- Localização atual
+- Episódio que apareceu
 
 ![image](https://github.com/gabebuenu/rickandmorty/assets/127902855/5bcc4c95-7848-4859-86d9-f351e8f1e26e)
 ![image](https://github.com/gabebuenu/rickandmorty/assets/127902855/0127e556-ad3d-4fc0-85ce-f2b61f7d842f)
