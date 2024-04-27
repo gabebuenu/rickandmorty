@@ -1,8 +1,8 @@
 # Rick and Morty
 
-#Nome: Gabriel Bueno da Silva
-#RA: 1960373
-#Termo: 3°A
+- Nome: Gabriel Bueno da Silva
+- RA: 1960373
+- Termo: 3°A
 
 # Listando personagens
 
