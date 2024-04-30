@@ -3,17 +3,37 @@
 import { onMounted, reactive, ref } from 'vue';
 import ListPersonagens from '../components/ListPersonagens.vue';
 
-let personagens = reactive(ref())
+let personagens = reactive(ref());
 
-// fetch - axios
+let pagina = 1
+
 onMounted(() => {
-  fetch("https://rickandmortyapi.com/api/character")
-  .then(response => response.json())
-  .then(response => {
-    personagens.value = response.results
-    console.log(personagens)
-  })
-})
+  trocarPersonagens();
+});
+
+function trocarPersonagens() {
+  fetch("https://rickandmortyapi.com/api/character?page=" + pagina)
+    .then(response => response.json())
+    .then(response => {
+      personagens.value = response.results;
+      console.log(personagens);
+
+    });
+}
+
+function Proxima() {
+  pagina++;
+  trocarPersonagens();
+  personagens.value = []
+}
+
+function Voltar() {
+  if (pagina > 1) {
+    pagina--;
+    trocarPersonagens();
+    personagens.value = []
+  }
+}
 </script>
 
 
@@ -31,7 +51,7 @@ onMounted(() => {
         </div>
         <div class="texto">
         <h1>Rick & Morty: Este programa ensina a respeitar o idoso, mesmo que seja um alcoólatra perigoso, que vive em uma realidade paralela e que é seu próprio avô.</h1>
-      </div>
+      </div>  
         <section>        
         <div class="col-sm-12 col-md-6">
           <div class="cardi">
@@ -46,9 +66,23 @@ onMounted(() => {
             :species="personagem.species"
             :gender="personagem.gender"
             :location="personagem.location"
-            :episode="personagem.episode"
-            />
+            :episode="personagem.episode" />
             </div>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous" @click="Voltar()">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">{{ pagina }}</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next" @click="Proxima()">
+                <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </section>
