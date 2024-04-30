@@ -155,7 +155,64 @@ footer{
   padding: 10px 30px 10px 100px;
 }
 
+.pagination {
+  display: flex;
+  float: right;
+  list-style: none;
+  padding: 0;
+}
 
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  color: #000000;
+  text-decoration: none;
+}
+
+.page-link:hover {
+  text-decoration: none;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+.page-link span {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
+.page-link:focus span {
+  box-shadow: 0 0 0 0.2rem rgba(37, 37, 37, 0.25);
+}
+
+.page-link:hover span {
+  color: #1f1f1f;
+}
+
+.page-link[aria-disabled="true"] {
+  color: #6c757d;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #161616;
+  border-color: #2e2e2e;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  pointer-events: none;
+  background-color: transparent;
+  border-color: #dee2e6;
+}
 
 </style>
 
