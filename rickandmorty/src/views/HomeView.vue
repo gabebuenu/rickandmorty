@@ -3,8 +3,9 @@
 import { onMounted, reactive, ref } from 'vue';
 import ListPersonagens from '../components/ListPersonagens.vue';
 
-let personagens = reactive(ref());
+// Inspiração da pagination, atráves de um colega
 
+let personagens = reactive(ref());
 let pagina = 1
 
 onMounted(() => {
