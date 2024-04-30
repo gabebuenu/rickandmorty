@@ -214,5 +214,26 @@ footer{
   border-color: #dee2e6;
 }
 
+@media screen and (max-width: 768px) {
+    .section {
+        width: 90%;
+    }
+    .template{
+        width: 90%;
+    }
+    .pagination{
+      justify-content: center;
+      align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section {
+        width: 100%;
+    }
+    .template{
+        width: 100%;
+    }
+}
 </style>
 
